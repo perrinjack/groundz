@@ -6,7 +6,7 @@ const Navigation = () => {
     <ul className="nav justify-content-center fixed-top">
       <li className="nav-item">
         <NavLink
-          activeClassName="is-active"
+          activeStyle={{ color: 'red' }}
           className="nav-link"
           to="/australia"
         >
@@ -15,7 +15,7 @@ const Navigation = () => {
       </li>
       <li className="nav-item">
         <NavLink
-          activeClassName="is-active"
+          activeStyle={{ color: 'red' }}
           className="nav-link"
           to="/new-zealand"
         >
@@ -24,7 +24,7 @@ const Navigation = () => {
       </li>
       <li className="nav-item">
         <NavLink
-          activeClassName="is-active"
+          activeStyle={{ color: 'red' }}
           className="nav-link"
           to="/united-kingdom"
         >
