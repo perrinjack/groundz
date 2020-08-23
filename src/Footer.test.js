@@ -8,3 +8,9 @@ it('renders without crashing', () => {
   ReactDOM.render(<Footer />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+test('Copyright text is displayed', () => {
+  const { getByText } = render(<Footer />);
+  const linkElement = getByText(/© 2020 Copyright: J Perrin/i);
+  expect(linkElement).toBeInTheDocument();
+});
