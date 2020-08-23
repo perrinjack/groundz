@@ -1,7 +1,16 @@
 import React from 'react';
+import apiKey from '../config.js';
 
-const Item = (props) => {
-  return (<h1>hello </h1>)
-};
+export default class Item extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      location: props.location,
+      apiResponse: null,
+    };
+  }
 
-export default Item;
+  render() {
+    return <h1>hello</h1>;
+  }
+}
