@@ -7,6 +7,12 @@ const Navigation = () => {
       <li className="nav-item">
         <NavLink to="/australia">Australia</NavLink>
       </li>
+      <li className="nav-item">
+        <NavLink to="/australia">New Zealand</NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink to="/australia">U.K</NavLink>
+      </li>
     </ul>
   );
 };
