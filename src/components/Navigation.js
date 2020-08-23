@@ -17,7 +17,7 @@ const Navigation = () => {
         <NavLink
           activeClassName="is-active"
           className="nav-link"
-          to="/australia"
+          to="/new-zealand"
         >
           New Zealand
         </NavLink>
@@ -26,7 +26,7 @@ const Navigation = () => {
         <NavLink
           activeClassName="is-active"
           className="nav-link"
-          to="/australia"
+          to="/united-kingdom"
         >
           U.K
         </NavLink>
