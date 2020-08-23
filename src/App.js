@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import Item from './components/Item';
 class App extends Component {
   render() {
     return (
@@ -15,7 +16,9 @@ class App extends Component {
           <Route render={(props) => <Navigation />} />
           <Switch>
             <Route exact path="/" render={() => <Redirect to="/australia" />} />
-            <Route path="/australia" />
+            <Route exact path="/australia">
+              <Item location="australia" />
+            </Route>
           </Switch>
           <Route render={(props) => <Footer />} />
         </div>
