@@ -13,7 +13,7 @@ class App extends Component {
         <div>
           <Switch>
             <Route exact path="/" render={() => <Redirect to="/australia" />} />
-            <Route path="/beach" />
+            <Route path="/australia" />
           </Switch>
         </div>
       </Router>
