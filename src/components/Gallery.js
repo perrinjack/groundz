@@ -13,15 +13,15 @@ const Gallery = (props) => {
     let title = image.title;
     let url = `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_m.jpg`;
     return (
-      <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card">
+      <div className="col-12 col-md-6 col-lg-4 mb-4">
+        <div className="card">
           <img
-            class="card-img-top"
+            className="card-img-top"
             src="https://res.cloudinary.com/sepuckett86/image/upload/v1513095416/IMG_7240_q9dadh.jpg"
             alt="Card image cap"
           />
-          <div class="card-body">
-            <h6 class="card-subtitle mb-2 text-right font-italic">
+          <div className="card-body">
+            <h6 className="card-subtitle mb-2 text-right font-italic">
               The Gabba, Brisbane. 2009
             </h6>
           </div>
