@@ -17,7 +17,7 @@ const Gallery = (props) => {
         <div className="card">
           <img
             className="card-img-top"
-            src="https://res.cloudinary.com/sepuckett86/image/upload/v1513095416/IMG_7240_q9dadh.jpg"
+            src="https://www.thestadiumbusiness.com/wp-content/uploads/2019/07/Basin_Reserve.jpeg"
             alt="Card image cap"
           />
           <div className="card-body">
