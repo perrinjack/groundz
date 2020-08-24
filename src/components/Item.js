@@ -14,7 +14,7 @@ export default class Item extends React.Component {
   async searchImages() {
     axios
       .get(
-        `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=australia&per_page=3&format=json&nojsoncallback=1`
+        `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${this.state.location}&per_page=3&format=json&nojsoncallback=1`
       )
       .then((response) => {
         this.setState({ apiResponse: response.data });
