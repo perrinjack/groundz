@@ -1,7 +1,7 @@
 import React from 'react';
 import { apiKey } from '../config.js';
 import axios from 'axios';
-import Gallery from './Gallery.js'
+import Gallery from './Gallery.js';
 export default class Item extends React.Component {
   constructor(props) {
     super(props);
@@ -17,7 +17,9 @@ export default class Item extends React.Component {
         `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${this.state.location}&per_page=1&format=json&nojsoncallback=1`
       )
       .then((response) => {
-        this.setState({ apiResponse: <Gallery /> });
+        this.setState({
+          apiResponse: <Gallery data={Response.data.photos.photo} />,
+        });
       })
       .catch((error) => {
         console.log(
@@ -32,6 +34,6 @@ export default class Item extends React.Component {
   }
 
   render() {
-  return <h1>{this.state.apiResponse}</h1>;
+    return <h1>{this.state.apiResponse}</h1>;
   }
 }
