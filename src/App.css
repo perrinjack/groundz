@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+/* Prevent image stretching is it's resized */
+.card-img-top {
+  object-fit: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Make all cards in row the same height */
+.row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.row > div[class*='col-'] {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Hover effects */
+.card {
+  transition: -webkit-transform 0.8s ease;
+}
+.card:hover {
+  transform: scale(1.04, 1.04);
+}
+
+/* Responsive design for image heights */
+@media screen and (min-width: 576px) {
+  .card-img-top {
+    height: 50vw;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 768px) {
+  .card-img-top {
+    height: 30vw;
   }
+}
+
+@media (min-width: 992px) {
+  .card-img-top {
+    height: 20vw;
+  }
+}
+
+@media only (min-width: 1200px) {
+  .card-img-top {
+    height: 20vw;
+  }
+}
+
+.nav {
+  background-color: #004880 !important;
+}
+.card-body {
+  background-color: #0371c5 !important;
+}
+
+body {
+  background-color: #004880 !important;
+  color: azure;
+}
+
+.card {
+  border-color: #004880;
 }
