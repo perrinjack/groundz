@@ -13,7 +13,13 @@ const Gallery = (props) => {
     let url = `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_m.jpg`;
     return <h4>This would be an image component</h4>;
   });
-  return <div>{images}</div>;
+
+  return (
+    <div>
+      <br></br>
+      <div >{images}</div>
+    </div>
+  );
 };
 
 export default Gallery;

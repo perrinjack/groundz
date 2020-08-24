@@ -7,7 +7,7 @@ export default class Item extends React.Component {
     super(props);
     this.state = {
       location: props.location,
-      apiResponse: null,
+      imageHTML: null,
     };
   }
 
@@ -18,7 +18,7 @@ export default class Item extends React.Component {
       )
       .then((response) => {
         this.setState({
-          apiResponse: <Gallery data={Response.data.photos.photo} />,
+          imageHTML: <Gallery data={response.data.photos.photo} />,
         });
       })
       .catch((error) => {
@@ -34,6 +34,6 @@ export default class Item extends React.Component {
   }
 
   render() {
-    return <h1>{this.state.apiResponse}</h1>;
+    return <h1>{this.state.imageHTML}</h1>;
   }
 }
