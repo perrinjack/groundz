@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Gallery = (props) => {
+  console.log(props.data);
   const results = props.data;
   let images;
 
@@ -32,7 +33,7 @@ const Gallery = (props) => {
   return (
     <div>
       <br></br>
-      <div className = 'row'>{images}</div>
+      <div className="row">{images}</div>
     </div>
   );
 };
