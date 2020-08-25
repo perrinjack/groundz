@@ -12,7 +12,15 @@ const Gallery = (props) => {
     let title = image.title;
     let url = `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_m.jpg`;
     let description = image.description._content;
-    return <Image url={url} title={title} description={description} />;
+    let date_taken = image.datetaken;
+    return (
+      <Image
+        url={url}
+        title={title}
+        description={description}
+        date={date_taken}
+      />
+    );
   });
 
   return (
