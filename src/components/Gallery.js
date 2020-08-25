@@ -9,7 +9,7 @@ const Gallery = (props) => {
     let farm = image.farm;
     let server = image.server;
     let id = image.id;
-    let secret = image.secret;
+    let secret = image.originalsecret;
     let title = image.title;
     let url = `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_m.jpg`;
     return <Image url={url} />;
