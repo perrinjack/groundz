@@ -21,3 +21,7 @@ body {
 .card {
   border-color: #004880;
 }
+
+.nav-link {
+  color: azure;
+}
