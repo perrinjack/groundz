@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from './Image.js';
 const Gallery = (props) => {
   console.log(props.data);
   const results = props.data;
@@ -12,22 +12,7 @@ const Gallery = (props) => {
     let secret = image.secret;
     let title = image.title;
     let url = `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_m.jpg`;
-    return (
-      <div className="col-12 col-md-6 col-lg-4 mb-4">
-        <div className="card">
-          <img
-            className="card-img-top"
-            src="https://www.thestadiumbusiness.com/wp-content/uploads/2019/07/Basin_Reserve.jpeg"
-            alt="Card image cap"
-          />
-          <div className="card-body">
-            <h6 className="card-subtitle mb-2 text-right font-italic">
-              The Gabba, Brisbane. 2009
-            </h6>
-          </div>
-        </div>
-      </div>
-    );
+    return <Image url={url} />;
   });
 
   return (
