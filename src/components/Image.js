@@ -6,7 +6,7 @@ const Image = ({ url, title }) => (
       <img className="card-img-top" src={url} alt={title} />
       <div className="card-body">
         <h6 className="card-subtitle mb-2 text-right font-italic">
-          The Gabba, Brisbane. 2009
+          {title}
         </h6>
       </div>
     </div>

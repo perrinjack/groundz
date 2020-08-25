@@ -14,9 +14,10 @@ export default class Item extends React.Component {
   async searchImages() {
     axios
       .get(
-        `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${this.state.location}&user_id=189820810@N06&extras=original_format&format=json&nojsoncallback=1`
+        `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${this.state.location}&user_id=189820810@N06&extras=original_format,description&format=json&nojsoncallback=1`
       )
       .then((response) => {
+        console.log(response)
         this.setState({
           imageHTML: <Gallery data={response.data.photos.photo} />,
         });
@@ -34,15 +35,6 @@ export default class Item extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-    
-        
-          
-          {this.state.imageHTML}
-          
-        
-      </div>
-    );
+    return <div>{this.state.imageHTML}</div>;
   }
 }
