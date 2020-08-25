@@ -6,7 +6,7 @@ export default class Item extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      location: props.location,
+      location: this.props.location,
       imageHTML: null,
     };
   }
@@ -34,6 +34,15 @@ export default class Item extends React.Component {
   }
 
   render() {
-    return <div>{this.state.imageHTML}</div>;
+    return (
+      <div>
+    
+        
+          
+          {this.state.imageHTML}
+          
+        
+      </div>
+    );
   }
 }

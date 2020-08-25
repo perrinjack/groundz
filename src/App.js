@@ -8,7 +8,7 @@ import {
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Item from './components/Item';
-import './App.css'
+import './App.css';
 class App extends Component {
   render() {
     return (
@@ -17,8 +17,11 @@ class App extends Component {
           <Route render={(props) => <Navigation />} />
           <Switch>
             <Route exact path="/" render={() => <Redirect to="/australia" />} />
-            <Route exact path="/australia">
+            <Route key="aus-path" exact path="/australia">
               <Item location="australia" />
+            </Route>
+            <Route key="nz-path" exact path="/new-zealand">
+              <Item location="new-zealand" />
             </Route>
           </Switch>
           <Route render={(props) => <Footer />} />
