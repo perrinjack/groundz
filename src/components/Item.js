@@ -1,7 +1,8 @@
 import React from 'react';
-import { apiKey } from '../config.js';
+
 import axios from 'axios';
 import Gallery from './Gallery.js';
+const API_KEY = process.env.REACT_APP_API_KEY
 export default class Item extends React.Component {
   constructor(props) {
     super(props);
@@ -14,7 +15,7 @@ export default class Item extends React.Component {
   async searchImages() {
     axios
       .get(
-        `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${this.state.location}&user_id=189820810@N06&extras=description,date_taken,url_o&format=json&nojsoncallback=1`
+        `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${API_KEY}&tags=${this.state.location}&user_id=189820810@N06&extras=description,date_taken,url_o&format=json&nojsoncallback=1`
       )
       .then((response) => {
         console.log(response);
