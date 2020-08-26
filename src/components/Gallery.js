@@ -7,14 +7,10 @@ const Gallery = (props) => {
   let images;
 
   images = results.map((image) => {
-    let farm = image.farm;
-    let server = image.server;
-    let id = image.id;
-    let secret = image.originalsecret;
     let title = image.title;
-    let url = `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_m.jpg`;
+    let url = image.url_o;
     let description = image.description._content;
-    let date_taken = Moment(image.datetaken).format('MMM Do YYYY')
+    let date_taken = Moment(image.datetaken).format('MMM Do YYYY');
     return (
       <Image
         url={url}
