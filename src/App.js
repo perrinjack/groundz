@@ -23,6 +23,9 @@ class App extends Component {
             <Route key="nz-path" exact path="/new-zealand">
               <Item location="new-zealand" />
             </Route>
+            <Route key="uk-path" exact path="/united-kingdom">
+              <Item location="united-kingdom" />
+            </Route>
           </Switch>
           <Route render={(props) => <Footer />} />
         </div>
