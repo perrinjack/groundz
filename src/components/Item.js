@@ -6,7 +6,7 @@ import Loader from 'react-loader-spinner';
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 const LoadingIndicator = (props) => {
-  const { promiseInProgress } = usePromiseTracker();
+  const { promiseInProgress } = usePromiseTracker({delay: 2000});
 
   return (
     promiseInProgress && (
@@ -19,7 +19,7 @@ const LoadingIndicator = (props) => {
           alignItems: 'center',
         }}
       >
-        <Loader type="ThreeDots" color="#2BAD60" height="500" width="500" />
+        <Loader type="ThreeDots" color="#2BAD60" height="300" width="300" />
       </div>
     )
   );
