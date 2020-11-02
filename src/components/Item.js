@@ -6,7 +6,7 @@ import Loader from 'react-loader-spinner';
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 const LoadingIndicator = (props) => {
-  const { promiseInProgress } = usePromiseTracker({delay: 2000});
+  const { promiseInProgress } = usePromiseTracker({ delay: 2000 });
 
   return (
     promiseInProgress && (
