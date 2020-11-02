@@ -1,5 +1,5 @@
 import React from 'react';
-import { usePromiseTracker, trackPromise } from 'react-promise-tracker';
+
 import axios from 'axios';
 import Gallery from './Gallery.js';
 import Loader from 'react-loader-spinner';
@@ -24,6 +24,8 @@ const LoadingIndicator = (props) => {
     )
   );
 };
+
+
 export default class Item extends React.Component {
   constructor(props) {
     super(props);
@@ -34,24 +36,22 @@ export default class Item extends React.Component {
   }
 
   async searchImages() {
-    trackPromise(
-      axios
-        .get(
-          `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${API_KEY}&tags=${this.state.location}&user_id=189820810@N06&extras=description,date_taken,url_o&format=json&nojsoncallback=1`
-        )
-        .then((response) => {
-          console.log(response);
-          this.setState({
-            imageHTML: <Gallery data={response.data.photos.photo} />,
-          });
-        })
-        .catch((error) => {
-          console.log(
-            'Encountered an error with fetching images from Flickr',
-            error
-          );
-        })
-    );
+    axios
+      .get(
+        `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${API_KEY}&tags=${this.state.location}&user_id=189820810@N06&extras=description,date_taken,url_o&format=json&nojsoncallback=1`
+      )
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          imageHTML: <Gallery data={response.data.photos.photo} />,
+        });
+      })
+      .catch((error) => {
+        console.log(
+          'Encountered an error with fetching images from Flickr',
+          error
+        );
+      });
   }
 
   componentDidMount() {
@@ -59,11 +59,6 @@ export default class Item extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <LoadingIndicator />
-        {this.state.imageHTML}
-      </div>
-    );
+    return <div>{this.state.imageHTML}</div>;
   }
 }
