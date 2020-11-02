@@ -1,6 +1,6 @@
 ## Groundz Worldwide
 
-Displays all the grounds visited by myself throughout the world, with images laoded from Flickkr utilising the FlickrAPI.
+Displays all the grounds visited by myself throughout the world, with images loaded utilising the Flickr API.
 
 Visit [here](https://groundzworldwide.herokuapp.com/)
 
