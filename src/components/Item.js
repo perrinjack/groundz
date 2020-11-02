@@ -4,7 +4,7 @@ import axios from 'axios';
 import Gallery from './Gallery.js';
 import Loader from 'react-loader-spinner';
 const API_KEY = process.env.REACT_APP_API_KEY;
-
+//imports above
 const LoadingIndicator = (props) => {
   const { promiseInProgress } = usePromiseTracker({ delay: 2000 });
 
