@@ -2,7 +2,30 @@ import React from 'react';
 
 import axios from 'axios';
 import Gallery from './Gallery.js';
-const API_KEY = process.env.REACT_APP_API_KEY
+import Loader from 'react-loader-spinner';
+const API_KEY = process.env.REACT_APP_API_KEY;
+//imports above
+const LoadingIndicator = (props) => {
+  const { promiseInProgress } = usePromiseTracker({ delay: 2000 });
+
+  return (
+    promiseInProgress && (
+      <div
+        style={{
+          width: '100%',
+          height: '100',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Loader type="ThreeDots" color="#2BAD60" height="300" width="300" />
+      </div>
+    )
+  );
+};
+
+
 export default class Item extends React.Component {
   constructor(props) {
     super(props);
